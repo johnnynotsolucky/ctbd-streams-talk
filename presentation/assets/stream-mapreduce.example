@@ -1,0 +1,25 @@
+xs
+.periodic(1000) // Produce
+/* mapReduce */
+.filter(isOdd)
+.map(productOf(10))
+.fold(sum, 0)
+.subscribe({ // Observe
+  next: x => console.log(x)
+})
+
+// 10
+// 40
+// 90
+// ...
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+const count$ = xs.periodic(1000) // Produce
+
+count$
+.compose(sumOddProductOf(10))
+.subscribe(logger('Odd')) // Observe
+
+count$
+.compose(sumPrimeProductOf(5))
+.subscribe(logger('Prime')) // Observe
+
+// Odd: 10
+// Prime: 10
+// Odd: 40
+// Prime: 25
+// Odd: 90
+// Prime: 50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

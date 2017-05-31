@@ -1,0 +1,28 @@
+body
+  font-family: 'Open Sans', sans-serif
+
+  .container
+    position: relative
+
+    .controls
+      position: absolute
+      z-index: 1000
+
+    .compass-element
+      width: 400px
+      height: 400px
+      position: absolute
+      transform-origin: 50%
+      transition: 0.2s transform
+
+      &.wind-direction
+        transform-origin: 69% 36%
+
+      &.boat-speed, &.wind-speed
+        *
+          transform: matrix(1.0829 0 0 1 171.8206 436.4399)
+          fill:#FFFFFF
+          stroke:#FFFFFF
+          stroke-width:1.125
+          font-family:'Arial-BoldMT'
+          font-size:26pt

@@ -1,0 +1,31 @@
+// Messages from client
+const steer$ = sources.Socket
+  .select('message')
+  .map(angleProp)
+  .map(notify('./interface/steer'))
+
+// Messages to client
+const sensors$ = sources.Boat.watch
+  .compose(combineSensors)
+  .compose(emitUpdate)
+
+return {
+  Socket: sensors$,
+  Boat: steer$
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

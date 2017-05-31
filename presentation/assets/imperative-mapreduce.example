@@ -1,0 +1,26 @@
+const arr = []
+setInterval(() => {
+  arr.push(arr.length + 1)
+  let sumProduct = 0;
+  for (x of arr) {
+    if(x % 2 !== 0) {
+      sumProduct += x * 10
+    }
+  }
+  console.log(sumProduct)
+}, 1000)
+
+// 10
+// 40
+// 90
+// ...
+
+
+
+
+
+
+
+
+
+

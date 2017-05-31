@@ -1,0 +1,34 @@
+// Messages from server over socket
+const vdom$ = sources.Socket
+  .select('message')
+  .compose(pickSensors)
+  .map(sensors =>
+    div([
+      div(sensors.bearing),
+      div(sensors.boatSpeed),
+      div(sensors.windDirection),
+      div(sensors.windSpeed),
+    ])
+  )
+
+return {
+  DOM: vdom$
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
