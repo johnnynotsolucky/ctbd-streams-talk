@@ -15,7 +15,8 @@ import {
   ListItem,
   List,
   Slide,
-  Text
+  Text,
+  Link
 } from "spectacle";
 
 // Import image preloader util
@@ -357,14 +358,9 @@ export default class Presentation extends React.Component {
           <Heading fit caps>
             #AMA
           </Heading>
-          <List>
-            <ListItem bold>
-              Source will be on Github
-            </ListItem>
-            <ListItem bold>
-              Slides too
-            </ListItem>
-          </List>
+          <Text margin="30px 0 0" textColor="primary" size={2} bold>
+            Source + Slides on <Link textColor="lava" href="https://github.com/johnnynotsolucky/ctbd-streams-talk">Github</Link>
+          </Text>
         </Slide>
       </Deck>
     );
