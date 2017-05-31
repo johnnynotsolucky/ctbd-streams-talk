@@ -10,7 +10,7 @@ const dataToFloat = (filename: string, input$: Stream<WatchEvent>): Stream<numbe
   input$
   .filter(({ filename: evFilename }: WatchEvent) => evFilename === filename)
   .map(({ data }: WatchEvent) => parseFloat(data || ''))
-  // .startWith(-1)
+  .startWith(-1)
 
 const combineSensors = (input$: Stream<WatchEvent>): Stream<Sensors> =>
   xs.combine(
